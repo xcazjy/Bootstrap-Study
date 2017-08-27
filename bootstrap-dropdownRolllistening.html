@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>bootstrap-modalframe</title>
+  <link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  
+  <!-- <div class="dropdown" id="dropdown">
+    <button class="btn btn-primary" id="btn" data-toggle="dropdown" data-target="#dropdown">
+      dropdown <span class="caret"></span>
+    </button> 
+    <ul class="dropdown-menu">
+      <li><a href="">main</a></li>
+      <li><a href="">info</a></li>
+      <li><a href="">proudct</a></li>
+      <li><a href="">about</a></li>
+    </ul>
+  </div> -->
+    <nav id="nav" class="navbar navbar-default">
+      <a href="" class="navbar-brand">web</a>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#html5">html5</a>
+        </li>
+        <li>
+          <a href="#bootstrap">bootstrap</a>
+        </li>
+        <li class="dropdown">
+          <a href="" data-toggle="dropdown">javascript <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#jquery">jQuery</a></li>
+            <li><a href="#yui">Yui</a></li>
+            <li><a href="#extjs">ExtJS</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <nav id='nav2' class="navbar navbar-default">
+      <a href="" class="navbar-brand">Web</a>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#html5">html5</a>
+        </li>
+        <li>
+          <a href="#bootstrap">bootstrap</a>
+        </li>
+        <li class="dropdown">
+          <a href="" data-toggle="dropdown">javascript <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#jquery">jQuery</a></li>
+            <li><a href="#yui">Yui</a></li>
+            <li><a href="#extjs">ExtJS</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+      
+    <div id="content" style="padding: 0 10px;height: 200px;overflow: auto;position: relative;" data-offset="0" data-spy="scroll" data-target="#nav"><!--   -->
+      <section class="sec">
+        <h4 id="html5">HTML5 <a href="javascript:;" onclick="removeSec(this);">delete</a></h4>
+        <p>HTML5 info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info</p>
+      </section>
+      <section class="sec">
+        <h4 id="bootstrap">Bootstrap</h4>
+        <p>Bootstrap info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info</p>
+      </section>
+      <section class="sec">
+        <h4 id="jquery">jQuery</h4>
+        <p>jQuery info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info</p>
+      </section>
+      <section class="sec">
+        <h4 id="yui">Yui</h4>
+        <p>Yui info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info</p>
+      </section>
+      <section class="sec">
+        <h4 id="extjs">ExtJS</h4>
+        <p>ExtJS info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info info ExtJS info</p>
+      </section>
+    </div>  
+
+  <script src="../DIC/jquery-3.1.1.min.js"></script>
+  <script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    // $('#btn').dropdown(); 
+    // $('#btn').dropdown('toggle'); 其他地方点击出现它才用，点击自己不用,几乎不用。
+    // $('#dropdown').on('show.bs.dropdown',function(){
+    //   alert('use show ');
+    // });
+    // $('#content').scrollspy({
+    //   offset : 0,
+    //   target : '#nav'
+    // });
+
+    // $('#nav').on('activate.bs.scrollspy',function(){
+    //   alert('new active');
+    // });
+
+    function removeSec(e){
+      console.log(e);
+      $(e).parents('.sec').remove();
+      $('#content').scrollspy('refresh');
+    }
+
+  </script>
+</body>
+</html>

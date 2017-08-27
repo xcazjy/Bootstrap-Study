@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scable=no">
+  <title>bootstrap</title>
+  <link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+  <form>
+
+    <div> 
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">email</label> <!-- control-label 和 form-horizontal 同步 -->
+        <div class="col-sm-10">
+          <input type="email" class="form-control" placeholder="lalal">
+        </div>
+      </div>
+
+      
+
+    </div>
+
+    <div class="form-group has-success has-feedback">
+      <label class="col-sm-2 control-label">password</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control input-lg" placeholder="lalal">
+      </div>
+      <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox">sport
+      </label>
+    </div>
+
+    <div class="checkbox disabled">
+      <label>
+        <input type="checkbox" disabled="">music
+      </label>
+    </div>
+
+    <label class="checkbox-inline">
+      <input type="checkbox">sport
+    </label>
+
+    <label class="checkbox-inline disabled">
+      <input type="checkbox" disabled>music
+    </label>
+    
+    <select class="form-control">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+    </select>
+
+  </form>
+
+
+
+
+  <form>  <!--class="form-inline" inline form one line -->
+    
+    <div class="form-horizontal"> 
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" placeholder="lalal">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">password</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" placeholder="lalal">
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="input-group">  <!-- 合并组 -->
+      <div class="input-group-addon">$</div>
+      <input type="email" class="form-control" placeholder="lalal">
+      <div class="input-group-addon">.00</div>
+    </div>
+
+
+
+  </form>
+  <img src="../A/2016120101/img/bg.jpeg" alt="image" class="img-rounded">
+  <img src="../A/2016120101/img/bg.jpeg" alt="image" class="img-circle">
+  <img src="../A/2016120101/img/bg.jpeg" alt="image" class="img-thumbnail img-responsive">
+  <button class="btn btn-success btn-lg">button</button>
+  <script src="../DIC/jquery-3.1.1.min.js"></script>
+  <script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

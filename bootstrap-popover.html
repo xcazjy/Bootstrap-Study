@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>bootstrap-popover</title>
+  <link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+  <style>
+    a:focus{outline: none};
+  </style>
+</head>
+<body style="margin:200px">
+  <div id="view" style="
+      border:1px solid red;
+      height: 100px;
+      width: 300px;">
+    <button id="b" class="btn btn-danger btn-lg" 
+    data-toggle="popover" 
+    title="bootstrap" 
+    data-content="bootstrap info"
+    data-placement="right">click show/hide popover</button>
+  </div>
+
+  <button id="btn">click</button>
+
+  <script src="../DIC/jquery-3.1.1.min.js"></script>
+  <script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $('#b').popover({
+      viewport:{
+        selector : '#view',
+        padding : 10,
+      }
+    });
+
+    $('#btn').on('click',function(){
+      $('#b').popover('toggle');
+    });
+
+    $('#b').on('show.bs.popover',function(){
+      alert('before show active');
+    });
+  </script>
+</body>
+</html>

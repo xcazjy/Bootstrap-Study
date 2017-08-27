@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>bootstrap-button</title>
+  <link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+  <style>
+    a:focus{outline: none};
+  </style>
+</head>
+<body style="margin:200px">
+  <button class="btn btn-primary" data-toggle="button" autocomplete="off">button</button>
+
+<!-- <div class="btn-group" data-toggle="buttons">
+  <label for="" class="btn btn-primary active">
+    <input type="radio" value="na" name="sex" checked>na
+  </label>
+  <label for="" class="btn btn-primary">
+    <input type="radio" value="nv" name="sex">nv
+  </label>
+</div> -->
+<!-- 
+<div class="btn-group" data-toggle="buttons">
+  <label for="" class="btn btn-primary active">
+    <input type="checkbox" value="fa" name="music" checked>music
+  </label>
+  <label for="" class="btn btn-primary">
+    <input type="checkbox" value="fa" name="sport">sport
+  </label>
+  <label for="" class="btn btn-primary active">
+    <input type="checkbox" value="fa" name="art" checked>art
+  </label>
+  <label for="" class="btn btn-primary">
+    <input type="checkbox" value="fa" name="computer">computer
+  </label>
+</div> -->
+ <!-- <button class="btn btn-primary" data-loading-text="loading..." autocomplete="off">loading.</button> -->
+
+
+  <script src="../DIC/jquery-3.1.1.min.js"></script>
+  <script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    // $('button').on('click',function(){
+    //    var btn = $(this).button('loading');
+    //    setTimeout(function(){
+    //     btn.button('reset');
+    //    },1000);
+    // });
+    $('button').on('click',function(){
+      $(this).button('toggle');
+    })
+  </script>
+</body>
+</html>

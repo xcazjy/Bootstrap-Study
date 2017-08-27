@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>bootstrap-tabs</title>
+  <link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+  <style>
+    a:focus{outline: none}
+  </style>
+</head>
+<body style="margin:200px">
+
+  <ul class="nav nav-pills">
+    <li class="active"><a href="#html5" data-toggle="tab">html5</a></li>
+    <li><a href="#bootstrap" data-toggle="tab">Bootstrap</a></li>
+    <li><a href="#jquery" data-toggle="tab">jQuery</a></li>
+    <li><a href="#yui" data-toggle="tab">Yui</a></li>
+  </ul>
+  
+<!--   <ul class="nav nav-tabs">
+    <li class="active"><a href="#html5" data-toggle="tab">html5</a></li>
+    <li><a href="#bootstrap" data-toggle="tab">Bootstrap</a></li>
+    <li><a href="#jquery" data-toggle="tab">jQuery</a></li>
+    <li><a href="#yui" data-toggle="tab">Yui</a></li>
+  </ul> -->
+
+  <ul id="nav" class="nav nav-tabs">
+    <li class="active"><a href="#html5">html5</a></li>
+    <li><a href="#bootstrap">Bootstrap</a></li>
+    <li><a href="#jquery">jQuery</a></li>
+    <li><a href="#yui">Yui</a></li>
+  </ul>
+
+  <div class="tab-content" style="padding:10px;"> <!-- 默认情况下fade第一个没有加个in就有了 -->
+        <div class="tab-pane fade in active" id="html5">HTML5 info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info info HTML5 info</div>
+
+        <div class="tab-pane fade" id="bootstrap">Bootstrap info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info info Bootstrap info</div>
+
+        <div class="tab-pane fade" id="jquery">jQuery info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info info jQuery info</div>
+    
+        <div class="tab-pane fade" id="yui">Yui info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info info Yui info</div>
+
+  </div>
+  <script src="../DIC/jquery-3.1.1.min.js"></script>
+  <script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $('#nav a').on('click',function(e){
+      e.preventDefault();
+      $(this).tab('show');
+    });
+
+    $('#nav a').on('show.bs.tab',function(){
+      alert('click active');
+    });
+
+    $('#nav a').on('shown.bs.tab',function(){
+      alert('click end active');
+    });
+
+  </script>
+</body>
+</html>

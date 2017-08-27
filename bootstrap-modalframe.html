@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scable=no">
+  <title>bootstrap-modalframe</title>
+  <link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+</head>
+<body style="margin: 100px;">
+  <!-- modal frame function -->
+  <div class="modal fade" id="myModal" tabindex="-1"> <!--fade淡入淡出 tabindex取消焦点 -->
+    <!-- window function -->
+    <div class="modal-dialog"><!-- modal-lg modal-sm -->
+      <!-- content function -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal"><span>&times;</span></button>
+          <h4 class="modal-title">sign in</h4>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-4">1</div>
+              <div class="col-md-4">2</div>
+              <div class="col-md-4">3</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default">join</button>
+          <button class="btn btn-primary">sign in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" id="btn" >click dialog</buttion><!-- data-backdrop="false" 空白处无黑色透明 点击空白不关闭 data-backdrop="static"背景透明黑灰还有但点击无效 data-keyboard=“false”点击esc无效 data-show="false"点击第一下无效，因为false初始化时默认是隐藏 -->
+  
+<!-- XMLHttpRequest cannot load file:///Users/ShArkJING/website/bootstrap/content.html. Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https. -->
+
+  <script src="../DIC/jquery-3.1.1.min.js"></script>
+  <script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $('#btn').on('click',function(){
+      $('#myModal').modal('show');
+    });
+
+    $('#myModal').modal({
+        show: false,
+        remote:'content.html',
+    });
+
+    $('#myModal').on('show.bs.modal',function(){
+      alert('when show active');
+    });
+
+    $('#myModal').on('shown.bs.modal',function(){
+      alert('when css loading success active');
+    });
+
+    $('#myModal').on('hide.bs.modal',function(){
+      alert('when hide close');
+    });
+
+    $('#myModal').on('hidden.bs.modal',function(){
+      alert('when modal at once close ative');
+    });
+
+    $('#myModal').on('loaded.bs.modal',function(){
+      alert('when remote loading ative');
+    });
+  </script>
+</body>
+</html>

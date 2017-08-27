@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <title>bootstrap-carousel</title>
+        <link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+        <style>
+        a:focus {
+            outline: none
+        };
+        </style>
+    </head>
+    <body>
+        <div id="myCarousel" class="carousel slide" style="width: 640px;"><!-- data-ride = "carousel" 默认5s自动轮播 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol><!-- 3个小圆点 -->
+            <div class="carousel-inner">
+                <div class="item active"><img src="1.png" alt="p1">
+                    <div class="carousel-caption">
+                        <h3>标题</h3>
+                        <p>image</p>
+                    </div></div>
+                <div class="item"><img src="2.png" alt="p2">
+                    <div class="carousel-caption">
+                        <h3>标题</h3>
+                        <p>image</p>
+                    </div></div>
+                <div class="item"><img src="3.png" alt="p3">
+                    <div class="carousel-caption">
+                        <h3>标题</h3>
+                        <p>image</p>
+                    </div></div>
+            </div><!-- 3张图片 -->
+            <a href="#myCarousel" data-slide="prev" class="carousel-control left">&lsaquo;</a>
+            <a href="#myCarousel" data-slide="next" class="carousel-control right">&rsaquo;</a><!-- 2个向左向右 -->
+        </div>
+        <button class="btn btn-default" id="cycle">cycle</button>
+        <button class="btn btn-default" id="pause">pause</button>
+        <button class="btn btn-default" id="number">number</button>
+        <button class="btn btn-default" id="prev">prev</button>
+        <button class="btn btn-default" id="next">next</button>
+        <script src="../DIC/jquery-3.1.1.min.js"></script>
+        <script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+          // $('#myCarousel').carousel({
+          //   interval : 2000, //轮播时间
+          //   pause : 'hover', //设置暂停按钮事件
+          //   wrap : false, //设置是否持续播放
+          // });
+
+          $('#cycle').on('click',function(){
+            $('#myCarousel').carousel('cycle');
+          });
+
+          $('#pause').on('click',function(){
+            $('#myCarousel').carousel('pause');
+          });
+
+          $('#number').on('click',function(){
+            $('#myCarousel').carousel(2); //数字2表示3到第3张
+          });
+
+          $('#prev').on('click',function(){
+            $('#myCarousel').carousel('prev');
+          });
+
+          $('#next').on('click',function(){
+            $('#myCarousel').carousel('next');
+          });
+
+          // $('#myCarousel').on('slide.bs.carousel',function(){
+          //   alert('before active')
+          // });
+
+          // $('#myCarousel').on('slid.bs.carousel',function(){
+          //   alert('after active')
+          // });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scable=no">
+  <title>bootstrap-input nav</title>
+  <link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+</head>
+<body style="margin:200px;">
+  <div class="input-group">
+    <span class="input-group-addon">@</span>
+    <input type="text" class="form-control">
+  </div>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon"><input type="checkbox"></span>
+    <span class="input-group-addon"><input type="radio"></span>
+    <input type="text" class="form-control">
+    <span class="input-group-addon">@qq.com</span>
+  </div>
+  <br>
+  <div class="input-group input-group-lg">
+    <span class="input-group-addon">$</span>
+    <input type="text" class="form-control">
+    <span class="input-group-addon">.00</span>
+  </div>
+  <br>
+  <div class="input-group">
+    <input type="text" class="form-control">
+    <div class="input-group-btn">
+      <button class="btn btn-default">submit</button>
+    </div>
+  </div>
+  <br>
+  <div class="input-group">
+    <input type="text" class="form-control">
+    <div class="input-group-btn"> <!-- can + open dropup-->
+        <button class="btn btn-default" data-toggle="dropdown">
+          down tool
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu"> <!-- dropdown-menu-right -->
+          <li class="dropdown-header">nav</li>
+          <li><a href="">main</a></li>
+          <li><a href="">info</a></li>
+          <li class="divider"><a href="">product</a></li>
+          <li class="disabled"><a href="">about</a></li>
+        </ul>
+    </div> 
+  </div>
+  <br>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="">main</a></li>
+    <li><a href="">info</a></li>
+    <li><a href="">product</a></li>
+    <li><a href="">about</a></li>
+  </ul>
+  <br>
+  <ul class="nav nav-pills">
+    <li class="active"><a href="">main</a></li>
+    <li><a href="">info</a></li>
+    <li><a href="">product</a></li>
+    <li><a href="">about</a></li>
+  </ul>
+  <br>
+  <ul class="nav nav-pills nav-stacked">
+    <li class="active"><a href="">main</a></li>
+    <li><a href="">info</a></li>
+    <li><a href="">product</a></li>
+    <li><a href="">about</a></li>
+  </ul>
+  <br>
+  <ul class="nav nav-tabs nav-justified">
+    <li class="active"><a href="">main</a></li>
+    <li><a href="#">info</a></li>
+    <li class="dropdown">
+      <a href="#" data-toggle="dropdown">
+        dropdownTool
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="">main</a></li>
+        <li><a href="">info</a></li>
+        <li><a href="">product</a></li>
+        <li><a href="">about</a></li>
+      </ul>
+    </li>
+    <li><a href="">product</a></li>
+    <li><a href="">about</a></li>
+  </ul>
+
+  <script src="../DIC/jquery-3.1.1.min.js"></script>
+  <script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

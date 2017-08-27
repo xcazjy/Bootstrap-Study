@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>bootstrap-alert</title>
+  <link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+  <style>
+    a:focus{outline: none};
+  </style>
+</head>
+<body style="margin:200px">
+
+  <!-- <div class="alert alert-warning fade in">
+  <butt class="close" data-dismiss="alert">
+    <span>&times;</span></butt>
+    <p>warning: your brower don't be this</p>
+  </div> -->
+
+  <div id="alert" class="alert alert-warning fade in">
+  <butt class="close">
+    <span>&times;</span></butt>
+    <p>warning: your brower don't be this</p>
+  </div>
+
+  <script src="../DIC/jquery-3.1.1.min.js"></script>
+  <script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $('.close').on('click',function(){
+      $('#alert').alert('close');
+    });
+    $('#alert').on('close.bs.alert',function(){
+      alert('close');
+    })
+  </script>
+</body>
+</html>
